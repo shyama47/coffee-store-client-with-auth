@@ -29,14 +29,15 @@ const AddCoffee = () => {
                         draggable: true
                       });
 
-                    //   form.reset()
+                      form.reset()
                 }
             })
     }
 
     return (
-        <div className='p-24'>
-            <div className='p-12 text-center space-y-4'>
+       
+        <div className='px-28 pb-10 bg-[#F4F3F0]'>
+            <div className='text-center p-12 space-y-3'>
                 <h1 className="text-6xl">Add Coffee</h1>
                 <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
             </div>
@@ -72,7 +73,7 @@ const AddCoffee = () => {
                     <input type="text" name='photo' className="input w-full" placeholder="Photo URL" />
                 </fieldset>
 
-                <input type="submit" className='btn w-full' value="Add Coffee" />
+               <input type="submit" className='btn w-full bg-[#E3B577] border border-[#331A15]' value="Add Coffee" />
             </form>
         </div>
     );
