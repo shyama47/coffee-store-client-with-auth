@@ -20,7 +20,7 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
 
-    fetch(`http://localhost:3000/users/${id}`,{
+    fetch(`https://module-56-5-coffee-store-server.vercel.app/users/${id}`,{
     method:'delete'
 })
 .then(res =>res.json())

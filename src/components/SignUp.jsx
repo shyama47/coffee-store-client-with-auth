@@ -27,7 +27,7 @@ const SignUp = () => {
         }
         console.log(userProfile)
         // save user profile info in the db
-        fetch('http://localhost:3000/users',{
+        fetch('https://module-56-5-coffee-store-server.vercel.app/users',{
             method:'Post',
             headers:{
                 'content-type':'application/json'
