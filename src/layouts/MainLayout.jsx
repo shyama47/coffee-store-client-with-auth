@@ -5,7 +5,9 @@ import Header from '../components/Header';
 const MainLayout = () => {
     return (
         <div>
-            <Header></Header>
+           <div className=' bg-amber-900'>
+             <Header></Header>
+           </div>
             <div className='max-w-7xl mx-auto'>
                 <Outlet></Outlet>
             </div>

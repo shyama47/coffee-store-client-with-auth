@@ -11,12 +11,21 @@ const SignUp = () => {
        const fromData =new FormData(form);
        const newUser =Object .fromEntries(fromData.entries())
     //    console.log(newUser)
-       const {email,password,...userProfile} =newUser;
-       console.log(email,password ,userProfile)
+       const {email,password, ...restFromData} =newUser;
+
+
     //    createUser in the firebase
        createUser (email,password)
        .then(result =>{
         console.log(result.user);
+        const userProfile ={
+            email,
+            ...restFromData,
+            creationTime :result.user.metadata?.creationTime,
+            lastLoginAt:result.user.metadata?.lastLoginAt,
+            lastSignInTime:result.user.metadata?.lastSignInTime,
+        }
+        console.log(userProfile)
         // save user profile info in the db
         fetch('http://localhost:3000/users',{
             method:'Post',

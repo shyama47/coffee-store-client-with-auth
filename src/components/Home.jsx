@@ -3,11 +3,13 @@ import AddCoffee from './AddCoffee';
 import { useLoaderData } from 'react-router';
 import CoffeeCard from './CoffeeCard';
 
+
 const Home = () => {
     const initialCoffees =useLoaderData();
    const [coffees,setCoffees] =useState(initialCoffees)
     return (
         <div>
+            
             <div className='my-6'>
                 <AddCoffee></AddCoffee>
             </div>
