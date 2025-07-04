@@ -25,7 +25,8 @@ const router = createBrowserRouter([
       {
         index: true,
         loader: () => fetch('http://localhost:3000/coffees'),
-        Component: Home
+        Component: Home,
+        hydrateFallbackElement:<span>Loading...</span>
       },
       {
         path: 'addCoffee',
@@ -38,7 +39,8 @@ const router = createBrowserRouter([
       {
         path: 'updateCoffeeData/:id',
         loader: ({ params }) => fetch(`http://localhost:3000/coffees/${params.id}`),
-        Component: UpdateCoffee
+        Component: UpdateCoffee,
+        hydrateFallbackElement:<span>Loading...</span>
       },
       {
         path:'signin',
@@ -51,7 +53,8 @@ const router = createBrowserRouter([
       {
         path:'users',
         Component:Users,
-        loader:()=>fetch('http://localhost:3000/users')
+        loader:()=>fetch('http://localhost:3000/users'),
+        hydrateFallbackElement:<span>Loading...</span>
       }
     ]
   },

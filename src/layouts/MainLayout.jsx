@@ -8,6 +8,7 @@ const MainLayout = () => {
            <div className=' bg-amber-900'>
              <Header></Header>
            </div>
+            {import.meta.env.VITE_name}
             <div className='max-w-7xl mx-auto'>
                 <Outlet></Outlet>
             </div>
